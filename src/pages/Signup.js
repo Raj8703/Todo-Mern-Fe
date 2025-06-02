@@ -13,7 +13,7 @@ export default function Signup() {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", {
+      const res = await axios.post("https://todo-mern-be.onrender.com/api/auth/signup", {
         email,
         password,
       });
