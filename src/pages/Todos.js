@@ -23,7 +23,7 @@ export default function Todos() {
     if (!text.trim()) return;
     try {
       await axios.post(
-        "http://localhost:5000/api/todos",
+        "https://todo-mern-be.onrender.com/api/todos",
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );
