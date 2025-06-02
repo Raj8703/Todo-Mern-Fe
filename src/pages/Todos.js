@@ -10,7 +10,7 @@ export default function Todos() {
 
   const fetchTodos = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/todos", {
+      const res = await axios.get("https://todo-mern-be.onrender.com/api/todos", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTodos(res.data);
@@ -36,7 +36,7 @@ export default function Todos() {
 
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/${id}`, {
+      await axios.delete(`https://todo-mern-be.onrender.com/api/todos/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchTodos();
